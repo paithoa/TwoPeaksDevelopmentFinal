@@ -10,6 +10,7 @@ var task=[]
 var project = [1,2,3]
 var news=[]
 var final=[]
+var id;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/static'));
 app.set('view engine', 'ejs');
@@ -46,17 +47,17 @@ app.get('/investmentoption',function(req,res){
 });
 
 app.get('/investmentrelation',function(req,res){
-  
+
   res.render('investmentrelation')
 });
 
 app.get('/missionandvalue',function(req,res){
- 
+
   res.render('missionandvalue')
 });
 
 app.get('/newsandmedia',function(req,res){
-  
+
 console.log(final)
   res.render('newsandmedia',{final:final})
 });
@@ -71,9 +72,9 @@ app.get('/projects',function(req,res){
 });
 
 app.get('/projects/:id',function(req,res){
-  var id= req.params.id
+  id= req.params.id
   console.log(id)
-  res.render('project')
+  res.render('project', {id})
 });
 
 app.get('/contact-us',function(req,res){

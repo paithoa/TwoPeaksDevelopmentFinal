@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="/assets/css/navigation.css">
     <link rel="stylesheet" href="/assets/css/Simple-Slider.css">
     <link rel="stylesheet" href="/assets/css/smoothproducts.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
@@ -46,9 +47,50 @@
         </div>
         </div>
     </nav>
-    <img class="img-fluid" src="/assets/img/2013029293_0_maccormicksimonianarchitectsmaccormickassociatesarchitects_bantrybayhouse_huwlambert-Medium%20(1).jpg">
+
+<div class="w3-content w3-display-container">
+    <div class="w3-display-container mySlides">
+  <img src="/assets/img/house<%=newid%>/img1.jpg" style="width:100%">
+
+</div>
+
+<div class="w3-display-container mySlides">
+<img src="/assets/img/house<%=newid%>/img2.jpg" style="width:100%">
+
+</div>
+
+<div class="w3-display-container mySlides">
+<img src="/assets/img/house<%=newid%>/img3.jpg" style="width:100%">
+</div>
+
+<div class="w3-display-container mySlides">
+<img src="/assets/img/house<%=newid%>/img4.jpg" style="width:100%">
+</div>
+
+<div class="w3-display-container mySlides">
+<img src="/assets/img/house<%=newid%>/img5.jpg" style="width:100%">
+</div>
+
+<div class="w3-display-container mySlides">
+<img src="/assets/img/house<%=newid%>/img6.jpg" style="width:100%">
+</div>
+
+<div class="w3-display-container mySlides">
+<img src="/assets/img/house<%=newid%>/img7.jpg" style="width:100%">
+</div>
+
+<div class="w3-display-container mySlides">
+<img src="/assets/img/house<%=newid%>/img8.jpg" style="width:100%">
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+
+</div>
+
     <hr>
-    <h1 class="text-center"> House <%=id%> </h1>
+    <h1 class="text-center"> House <%=newid%> </h1>
     <p class="text-center" style="padding-right: 15px;padding-left: 15px;">orem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus felis et libero scelerisque, sed aliquet nulla tincidunt. Quisque lorem nisl, semper vitae mattis nec, vestibulum nec risus. Sed ut volutpat tortor, ut sodales diam. Integer
         at tristique turpis. Integer orci leo, fringilla ac aliquet vitae, condimentum non lorem. Duis velit ex, aliquam vel pellentesque et, dictum vitae mauris. Vestibulum commodo luctus tortor eu ultrices. Fusce commodo enim non eros consectetur maximus.
         Donec venenatis dolor ut vestibulum fermentum. Aliquam malesuada sit amet nulla id imperdiet. Suspendisse maximus purus et ligula maximus, a luctus ante fringilla.<br><br>In vitae velit risus. Cum sociis natoque penatibus et magnis dis parturient
@@ -78,7 +120,24 @@
     <script src="assets/js/Card-hover-affect-2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
     <script src="assets/js/Simple-Slider.js"></script>
+<script>var slideIndex = 1;
+showDivs(slideIndex);
 
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
 </body>
 
 </html>

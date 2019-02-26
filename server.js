@@ -10,7 +10,9 @@ var task=[]
 var project = [1,2,3]
 var news=[]
 var final=[]
+var finalfinance=[]
 var id;
+var newid;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/static'));
 app.set('view engine', 'ejs');
@@ -22,7 +24,7 @@ axios.get('https://newsapi.org/v2/top-headlines?q=property&apiKey=5fceaf94ac074d
 .then(response => {
   news = response.data
   final = news.articles
-  console.log(final)
+
 
 
 })
@@ -30,6 +32,17 @@ axios.get('https://newsapi.org/v2/top-headlines?q=property&apiKey=5fceaf94ac074d
   console.log(error);
 });
 
+axios.get('https://newsapi.org/v2/top-headlines?country=au&category=business&apiKey=5fceaf94ac074d09a5e22cafcbd49b34')
+.then(response => {
+  financenews = response.data
+  finalfinance = financenews.articles
+  console.log(finalfinance)
+
+
+})
+.catch(error => {
+  console.log(error);
+});
 
 //takes us to the root(/) URL
 app.get('/', function(req, res){
@@ -59,7 +72,7 @@ app.get('/missionandvalue',function(req,res){
 app.get('/newsandmedia',function(req,res){
 
 console.log(final)
-  res.render('newsandmedia',{final:final})
+  res.render('newsandmedia',{final:final,finalfinance:finalfinance})
 });
 
 app.get('/partners',function(req,res){
@@ -73,8 +86,9 @@ app.get('/projects',function(req,res){
 
 app.get('/projects/:id',function(req,res){
   id= req.params.id
-  console.log(id)
-  res.render('project', {id})
+  newid = parseInt(id)
+  console.log(typeof newid)
+  res.render('project', {newid})
 });
 
 app.get('/contact-us',function(req,res){

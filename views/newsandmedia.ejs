@@ -58,19 +58,17 @@
             </div>
         </div>
     </div>
+    <p class="text-center" style="font-size:24px; margin-top:30px">Top Property news all over the world. </p>
     <div class="article-list">
         <div class="container">
-            <div class="intro">
-                <h2 class="text-center">Latest Articles</h2>
-                <p class="text-center">Top headlines of property news all over the world. </p>
-            </div>
+
             <div class="row articles">
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="<%=final[0].urlToImage%>"></a>
+                <div class="col-sm-6 col-md-4 item"><a href="<%=final[0].url%>" ><img class="img-fluid" src="<%=final[0].urlToImage%>"></a>
                     <h3 class="name"><%= final[0].title%></h3>
                     <p class="description"><%=final[0].description%></p><a href="<%=final[0].url%>" class="action"><i class="fa fa-arrow-circle-right"></i></a>
                 </div>
 
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="<%=final[1].urlToImage%>"></a>
+                <div class="col-sm-6 col-md-4 item"><a href="<%=final[1].url%>"><img class="img-fluid" src="<%=final[1].urlToImage%>"></a>
                     <h3 class="name"><%= final[1].title%></h3>
                     <p class="description"><%=final[1].description%></p><a href="<%=final[1].url%>" class="action"><i class="fa fa-arrow-circle-right"></i></a>
                 </div>
@@ -80,9 +78,9 @@
                 <div class="row">
                     <div class="col-lg-12 offset-lg-0">
                         <div class="row">
-                            <div class="col"><img></div>
+                            <div class="col"><a href="<%=final[2].url%>" class="action"><img src="<%=final[2].urlToImage%>" width="120px" height="90px" style="margin-bottom:30px;"></a></div>
                             <div class="col">
-                                <p>Paragraph</p>
+                                <p style="margin-top:30px;"><%=final[2].title%></p>
                             </div>
                         </div>
                     </div>
@@ -90,9 +88,9 @@
                 <div class="row">
                     <div class="col-lg-12 offset-lg-0">
                         <div class="row">
-                            <div class="col"><img></div>
+                            <div class="col"><a href="<%=final[3].url%>" class="action"><img src="<%=final[3].urlToImage%>" width="120px" height="90px" style="margin-bottom:30px;"></a></div>
                             <div class="col">
-                                <p>Paragraph</p>
+                                <p style="margin-top:30px;"><%=final[3].title%></p>
                             </div>
                         </div>
                     </div>
@@ -100,9 +98,9 @@
                 <div class="row">
                     <div class="col-lg-12 offset-lg-0">
                         <div class="row">
-                            <div class="col"><img></div>
+                            <div class="col"><a href="<%=final[4].url%>" class="action"><img src="<%=final[4].urlToImage%>" width="120px" height="90px" style="margin-bottom:30px;"></a></div>
                             <div class="col">
-                                <p>Paragraph</p>
+                                <p style="margin-top:30px;"><%=final[4].title%></p>
                             </div>
                         </div>
                     </div>
@@ -111,25 +109,29 @@
     </div>
     </div>
     </div>
+    <p class="text-center" style="font-size:24px;">Top Business news in Australia. </p>
     <div class="article-list">
         <div class="container">
-            <div class="intro"></div>
+
             <div class="row articles">
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/desk.jpg"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
-                <div
-                    class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/building.jpg"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+                <div class="col-sm-6 col-md-4 item"><a href="<%=finalfinance[0].url%>" ><img class="img-fluid" src="<%=finalfinance[0].urlToImage%>"></a>
+                    <h3 class="name"><%= finalfinance[0].title%></h3>
+                    <p class="description"><%=finalfinance[0].description%></p><a href="<%=finalfinance[0].url%>" class="action"><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 item"><a href="<%=finalfinance[1].url%>"><img class="img-fluid" src="<%=finalfinance[1].urlToImage%>"></a>
+                    <h3 class="name"><%= finalfinance[1].title%></h3>
+                    <p class="description"><%=finalfinance[1].description%></p><a href="<%=finalfinance[1].url%>" class="action"><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+
             <div
                 class="col-sm-6 col-md-4 col-lg-4 offset-lg-0 item">
                 <div class="row">
                     <div class="col-lg-12 offset-lg-0">
                         <div class="row">
-                            <div class="col"><img></div>
+                            <div class="col"><a href="<%=finalfinance[2].url%>" class="action"><img src="<%=finalfinance[2].urlToImage%>" width="120px" height="90px" style="margin-bottom:30px;"></a></div>
                             <div class="col">
-                                <p>Paragraph</p>
+                                <p style="margin-top:30px;"><%=finalfinance[2].title%></p>
                             </div>
                         </div>
                     </div>
@@ -137,9 +139,9 @@
                 <div class="row">
                     <div class="col-lg-12 offset-lg-0">
                         <div class="row">
-                            <div class="col"><img></div>
+                            <div class="col"><a href="<%=finalfinance[3].url%>" class="action"><img src="<%=finalfinance[3].urlToImage%>" width="120px" height="90px" style="margin-bottom:30px;"></a></div>
                             <div class="col">
-                                <p>Paragraph</p>
+                                <p style="margin-top:30px;"><%=finalfinance[3].title%></p>
                             </div>
                         </div>
                     </div>
@@ -147,9 +149,9 @@
                 <div class="row">
                     <div class="col-lg-12 offset-lg-0">
                         <div class="row">
-                            <div class="col"><img></div>
+                            <div class="col"><a href="<%=finalfinance[4].url%>" class="action"><img src="<%=finalfinance[4].urlToImage%>" width="120px" height="90px" style="margin-bottom:30px;"></a></div>
                             <div class="col">
-                                <p>Paragraph</p>
+                                <p style="margin-top:30px;"><%=finalfinance[4].title%></p>
                             </div>
                         </div>
                     </div>

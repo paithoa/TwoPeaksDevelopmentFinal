@@ -20,11 +20,11 @@ app.set('view engine', 'ejs');
 
 var port = process.env.PORT || 8080;
 
-axios.get('https://newsapi.org/v2/top-headlines?q=property&apiKey=5fceaf94ac074d09a5e22cafcbd49b34')
+axios.get('https://newsapi.org/v2/everything?q=realestate&apiKey=5fceaf94ac074d09a5e22cafcbd49b34')
 .then(response => {
   news = response.data
   final = news.articles
-
+ console.log(final)
 
 
 })
@@ -36,7 +36,7 @@ axios.get('https://newsapi.org/v2/top-headlines?country=au&category=business&api
 .then(response => {
   financenews = response.data
   finalfinance = financenews.articles
-  console.log(finalfinance)
+
 
 
 })

@@ -45,7 +45,7 @@ axios.get('https://newsapi.org/v2/everything?q=realestate&language=en&apiKey=5fc
   news = response.data
   final= news.articles
 
- console.log(shuffle(final))
+
 
 
 })
@@ -57,7 +57,6 @@ axios.get('https://newsapi.org/v2/top-headlines?country=au&category=business&api
 .then(response => {
   financenews = response.data
   finalfinance = financenews.articles
- 
 
 
 
@@ -65,6 +64,8 @@ axios.get('https://newsapi.org/v2/top-headlines?country=au&category=business&api
 .catch(error => {
   console.log(error);
 });
+
+
 
 
 //takes us to the root(/) URL
@@ -93,8 +94,15 @@ app.get('/missionandvalue',function(req,res){
 });
 
 app.get('/newsandmedia',function(req,res){
+  console.log(final.length)
+  for(var i=0; i < final.length; i++){
+    	if(final[i].urlToImage == null){
+    		 final[i].urlToImage = "/assets/img/placeholder.jpg"
+          console.log("catched")
+      }
+      console.log(final[i].urlToImage)
+    }
 
-console.log(final)
   res.render('newsandmedia',{final:final,finalfinance:finalfinance})
 });
 
